@@ -39,6 +39,6 @@ class RideControllerTest {
                 new CreateRideRequest(userId
                 ));
         assertNotNull(result);
-        assertEquals(result.getRideId(), "ride-id-1");
+        assertNotNull(result.getRideId());
     }
 }

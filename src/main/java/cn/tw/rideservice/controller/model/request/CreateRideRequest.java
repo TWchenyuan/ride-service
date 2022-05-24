@@ -7,6 +7,8 @@ public class CreateRideRequest {
         this.userId = userId;
     }
 
+    public CreateRideRequest() {
+    }
     public String getUserId() {
         return userId;
     }

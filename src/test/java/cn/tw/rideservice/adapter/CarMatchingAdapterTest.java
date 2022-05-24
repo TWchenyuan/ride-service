@@ -45,7 +45,7 @@ class CarMatchingAdapterTest {
         var proposalId = "proposal_id";
         var matchingDto = new MatchingDto(proposalId, "driver_id", BigDecimal.valueOf(100), 100L);
         var bodyString = objectMapper.writeValueAsString(matchingDto);
-        this.server.expect(ExpectedCount.once(), requestTo("https://matching-service/ride-proposals?proposalId=" + proposalId))
+        this.server.expect(ExpectedCount.once(), requestTo("http://matching-service/ride-proposals?proposalId=" + proposalId))
                 .andExpect(method(GET))
                 .andRespond(withSuccess(bodyString, APPLICATION_JSON));
 

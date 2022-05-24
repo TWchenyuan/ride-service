@@ -17,7 +17,7 @@ public class RideController {
         this.rideService = rideService;
     }
 
-    @PostMapping("/ride-requests/{rideRequestsId}/proposals/{proposalId}/contract")
+    @PostMapping("/ride-requests/{rideRequestId}/proposals/{proposalId}/contract")
     @ResponseStatus(CREATED)
     public RideCreatedResponse createRide(@PathVariable("rideRequestId") String rideRequestId,
                                           @PathVariable("proposalId") String proposalId,

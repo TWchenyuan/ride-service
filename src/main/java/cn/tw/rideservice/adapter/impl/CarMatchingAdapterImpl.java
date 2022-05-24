@@ -14,7 +14,7 @@ import java.net.URISyntaxException;
 @Component
 public class CarMatchingAdapterImpl implements CarMatchingAdapter {
     private final RestTemplate restTemplate;
-    private final String baseUrl = "https://matching-service";
+    private final String baseUrl = "http://matching-service";
 
     public CarMatchingAdapterImpl(RestTemplateBuilder restTemplateBuilder) {
         this.restTemplate = restTemplateBuilder.build();
