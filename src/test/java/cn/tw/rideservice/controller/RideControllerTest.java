@@ -7,6 +7,7 @@ import cn.tw.rideservice.service.model.Ride;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static cn.tw.rideservice.service.model.Ride.createRide;
 import static java.time.Instant.now;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -30,7 +31,7 @@ class RideControllerTest {
         var userId = "user-id-1";
         var proposalId = "proposal-id-1";
 
-        when(this.stubService.createRide(proposalId, userId)).thenReturn(new Ride("ride-id-1", now()));
+        when(this.stubService.createRide(proposalId, userId)).thenReturn(createRide(userId, proposalId));
 
         var result = this.rideController.createRide(
                 "ride-request-id-1",

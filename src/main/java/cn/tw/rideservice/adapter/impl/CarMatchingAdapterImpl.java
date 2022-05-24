@@ -5,7 +5,7 @@ import cn.tw.rideservice.adapter.dto.MatchingDto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CarMatchingAdapterIml implements CarMatchingAdapter {
+public class CarMatchingAdapterImpl implements CarMatchingAdapter {
     @Override
     public MatchingDto queryMatching(String proposalId) {
         // HTTP client call
