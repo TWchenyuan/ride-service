@@ -15,8 +15,8 @@ import static org.mockito.Mockito.when;
 
 
 class RideControllerTest {
-    RideController rideController;
-    RideService stubService;
+    private RideController rideController;
+    private RideService stubService;
 
     @BeforeEach
     void setUp() {
