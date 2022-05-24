@@ -1,11 +1,21 @@
 package cn.tw.rideservice.repository.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.Instant;
-
+@Entity
+@Table(name= "ride")
 public class RideEntity {
+    @Id
+    @Column(name = "ride_id")
     private String rideId;
+    @Column(name = "user_id")
     private String userId;
+    @Column(name = "proposal_id")
     private String proposalId;
+    @Column(name = "created_at")
     private Instant createdAt;
 
     public RideEntity() {
